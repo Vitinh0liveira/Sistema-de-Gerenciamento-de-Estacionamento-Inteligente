@@ -26,7 +26,7 @@ public abstract class Veiculo implements Exibivel{
         return placa + " | " + modelo + " | " + cor;
     }
 
-    public abstract double calcularTarifa(long min);
+    public abstract double calcularTarifa(int min);
     
 } 
 
