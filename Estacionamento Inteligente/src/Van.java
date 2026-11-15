@@ -1,9 +1,7 @@
 public class Van extends Veiculo{
-    private int qtdPass;
 
-    public Van(String placa, String modelo, String cor, int qtdPass) {
+    public Van(String placa, String modelo, String cor) {
         super(placa, modelo, cor);
-        this.qtdPass = qtdPass;
     }
 
     @Override 
@@ -11,16 +9,16 @@ public class Van extends Veiculo{
     public double calcularTarifa(int min){
         if(min<=15){
             
-            return TabelaTarifa.TR_15MIN + ((10/100)*TabelaTarifa.TR_15MIN);
+            return TabelaTarifa.TR_15MIN + ((10.0/100.0)*TabelaTarifa.TR_15MIN);
         }
         else if(min<=30){
-            return TabelaTarifa.TR_30MIN+ ((10/100)*TabelaTarifa.TR_30MIN);
+            return TabelaTarifa.TR_30MIN+ ((10.0/100.0)*TabelaTarifa.TR_30MIN);
         }
         else if(min<=60){
-            return TabelaTarifa.TR_1h+ ((10/100)*TabelaTarifa.TR_1h);
+            return TabelaTarifa.TR_1h+ ((10.0/100.0)*TabelaTarifa.TR_1h);
         }
         else{
-            return TabelaTarifa.TR_AH+ ((10/100)*TabelaTarifa.TR_AH);
+            return TabelaTarifa.TR_AH+ ((10.0/100.0)*TabelaTarifa.TR_AH);
         }
     }
     

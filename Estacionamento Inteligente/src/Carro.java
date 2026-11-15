@@ -1,9 +1,7 @@
 public class Carro extends Veiculo {
-    private int qtdPortas;
 
-    public Carro(String placa, String modelo, String cor, int qtdPortas) {
+    public Carro(String placa, String modelo, String cor) {
         super(placa, modelo, cor);
-        setQtdPortas(qtdPortas);
     }
     
     @Override 
@@ -23,11 +21,4 @@ public class Carro extends Veiculo {
         }
     }
 
-    public void setQtdPortas(int qtdPortas) {
-        if (qtdPortas == 2 || qtdPortas == 4) {
-            this.qtdPortas = qtdPortas;
-        } else {
-            this.qtdPortas = 4;
-        }
-    }
 }
